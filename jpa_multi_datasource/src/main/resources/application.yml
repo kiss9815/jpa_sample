@@ -1,0 +1,25 @@
+server:
+  port: 9099
+
+db1:
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/test?&useSSL=false&characterEncoding=UTF-8&serverTimezone=UTC
+    username: root
+    password: brian
+    driverClassName: com.mysql.cj.jdbc.Driver
+    
+db2:
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/boilerplate?&useSSL=false&characterEncoding=UTF-8&serverTimezone=UTC
+    username: root
+    password: brian 
+    driverClassName: com.mysql.cj.jdbc.Driver
+
+           
+jpa:  
+  show-sql: false
+  #database-platform: org.hibernate.dialect.MySQL5Dialect    
+  hibernate:    
+    ddl-auto: none #create 로 해놓으면 Data전체 삭제 됨. 개발 초기에는 update 사용하나 상용에는 none 필수.
+    naming:
+      physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
